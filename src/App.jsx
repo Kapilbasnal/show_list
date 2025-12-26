@@ -1,8 +1,15 @@
+import shows from "../data.json";
+
 function App() {
 
   return (
     <>
-    <h1>Hello World</h1>
+    <ul>
+      {shows.map(show => (
+        <li key={show.id}>
+          {show.showName}, {show.date}, {show.city}</li>
+      ))}
+    </ul>
     </>
   )
 }
